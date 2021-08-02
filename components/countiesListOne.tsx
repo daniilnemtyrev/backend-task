@@ -6,7 +6,7 @@ export const CountriesListOne = () => {
   const [countries, setCountries] = useState<ICountry[]>([]);
 
   const getCountries = async () => {
-    let response = await fetch("http://localhost:4000/countries");
+    let response = await fetch("https://fathomless-citadel-61313.herokuapp.com/countries");
     let data = await response.json();
     setCountries(data);
   };

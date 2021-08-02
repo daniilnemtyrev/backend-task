@@ -14,13 +14,13 @@ export const CountriesListSix = () => {
   const [countryNameSearch, setCountryNameSearch] = useState<string>("");
 
   const getCountries = async () => {
-    let response = await fetch("http://localhost:4000/countries");
+    let response = await fetch("https://fathomless-citadel-61313.herokuapp.com/countries");
     let data = await response.json();
     setCountries(data);
   };
 
   const getCities = async (id:number) => {
-    let response = await fetch(`http://localhost:4000/cities/${id}`);
+    let response = await fetch(`https://fathomless-citadel-61313.herokuapp.com/cities/${id}`);
     let data = await response.json();
     setCities(data);
   };
